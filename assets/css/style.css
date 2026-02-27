@@ -10,6 +10,7 @@
   font-weight: 400;
 }
 
+
 :root {
   --text: #1a1a1a;
   --accent: #ff2d92;
@@ -60,7 +61,7 @@ h2 {
 
 .header {
   padding: 24px 0;
-  background: #fff;
+  background: linear-gradient(90deg, #8EA6E9 0%, #9ED9E3 100%);
 }
 
 .header-inner {
@@ -96,7 +97,7 @@ h2 {
 }
 
 .hero {
-  background: linear-gradient(90deg, #a6daf7, #e0c3fc);
+  background: linear-gradient(90deg, #8EA6E9 0%, #9ED9E3 100%);
   padding: clamp(60px, 10vw, 120px) 0;
 }
 
@@ -164,19 +165,26 @@ h2 {
 }
 
 .about {
-  background: linear-gradient(90deg, #8ec5fc, #e0c3fc);
+  background: linear-gradient(90deg, #8EA6E9 0%, #9ED9E3 100%);
   padding: clamp(50px, 8vw, 100px) 0;
 }
 
 .about-wrapper {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;
   gap: clamp(24px, 5vw, 60px);
   align-items: center;
 }
 
+.about-image {
+  width: 100%;
+}
+
 .about-image img {
-  width: min(500px, 100%);
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  display: block;
 }
 
 .about-content p {
@@ -223,7 +231,7 @@ h2 {
 .news-card img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: px;
 }
 
 .footer {
@@ -360,6 +368,10 @@ h2 {
     justify-content: center;
   }
 
+  .about-image img {
+    max-width: 100%;
+  }
+
   .news-grid,
   .goals-grid {
     grid-template-columns: 1fr;
@@ -394,4 +406,27 @@ h2 {
   .nav {
     gap: 10px;
   }
+}
+.image-wrapper {
+  position: relative;
+  width: 300px; /* adjust as needed */
+}
+
+.image-wrapper img {
+  width: 40%;
+  display: block;
+}
+
+/* Background image */
+.back-img {
+  position: absolute;
+  top: 2px;      /* move down */
+  left: 2px;     /* move right */
+  z-index: 2;
+}
+
+/* Front image */
+.front-img {
+  position: relative;
+  z-index: 2;
 }
